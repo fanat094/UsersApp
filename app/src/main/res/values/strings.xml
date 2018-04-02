@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">UsersApp</string>
+    <string name="userid">UserId</string>
+    <string name="id">id</string>
+    <string name="body">body</string>
+    <string name="title">title</string>
+    <string name="put_userId">put_userId</string>
+    <string name="put_id">put_id</string>
+    <string name="put_title">put_title</string>
+    <string name="put_body">put_body</string>
 </resources>

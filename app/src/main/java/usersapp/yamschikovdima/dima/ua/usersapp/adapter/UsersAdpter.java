@@ -44,11 +44,12 @@ public class UsersAdpter extends RecyclerView.Adapter<UsersAdpter.MyViewHolder> 
         public void onClick(View view) {
 
             Intent putintent = new Intent (view.getContext(), SecondUsersActivity.class);
-            putintent.putExtra("put_userId", usersList.get(getPosition()).getUserId());
-            putintent.putExtra("put_id", usersList.get(getPosition()).getId());
-            putintent.putExtra("put_title", usersList.get(getPosition()).getTitle());
-            putintent.putExtra("put_body", usersList.get(getPosition()).getBody());
+            putintent.putExtra(view.getResources().getString(R.string.put_userId), usersList.get(getPosition()).getUserId());
+            putintent.putExtra(view.getResources().getString(R.string.put_id), usersList.get(getPosition()).getId());
+            putintent.putExtra(view.getResources().getString(R.string.put_title), usersList.get(getPosition()).getTitle());
+            putintent.putExtra(view.getResources().getString(R.string.put_body), usersList.get(getPosition()).getBody());
             view.getContext().startActivity(putintent);
+
         }
     }
 

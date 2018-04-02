@@ -22,9 +22,10 @@ public class SecondUsersActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         Intent fromintent = getIntent();
-        userId_tv.setText(Integer.toString(fromintent.getIntExtra("put_userId", 0)));
-        id_tv.setText(Integer.toString(fromintent.getIntExtra("put_id", 0)));
-        title_tv.setText(fromintent.getStringExtra("put_title"));
-        body_tv.setText(fromintent.getStringExtra("put_body"));
+        userId_tv.setText(Integer.toString(fromintent.getIntExtra(getResources().getString(R.string.put_userId), 0)));
+        id_tv.setText(Integer.toString(fromintent.getIntExtra(getResources().getString(R.string.put_id), 0)));
+        title_tv.setText(fromintent.getStringExtra(getResources().getString(R.string.put_title)));
+        body_tv.setText(fromintent.getStringExtra(getResources().getString(R.string.put_body)));
+
     }
 }
