@@ -1,8 +1,6 @@
 package usersapp.yamschikovdima.dima.ua.usersapp.presenter;
 
 
-import android.util.Log;
-
 import java.util.List;
 
 import io.reactivex.android.schedulers.AndroidSchedulers;
@@ -15,7 +13,6 @@ import usersapp.yamschikovdima.dima.ua.usersapp.view.ViewUsers;
 public class Presenter {
 
     ViewUsers view;
-    List<Users> usersList;
 
     public void attachView(ViewUsers view) {
         this.view = view;
@@ -30,10 +27,7 @@ public class Presenter {
                     @Override
                     public void onSuccess(List<Users> usersList) {
 
-                        //usersList = response.body();
-
                         view.get_json_users(usersList);
-                        Log.d("onSuc", usersList.size()+"");
 
                     }
 
@@ -45,22 +39,6 @@ public class Presenter {
                     }
                 });
 
-        /*App.getApi().getUsersModel().enqueue(new Callback<List<Users>>() {
-            @Override
-            public void onResponse(Call<List<Users>> call, Response<List<Users>> response) {
-
-                usersList = response.body();
-
-                view.get_json_users(usersList);
-
-            }
-
-            @Override
-            public void onFailure(Call<List<Users>> call, Throwable t) {
-                Log.d("RES", t.getMessage());
-                view.stfull();
-            }
-        });*/
     }
 
 }
